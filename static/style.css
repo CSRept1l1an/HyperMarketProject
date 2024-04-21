@@ -10,11 +10,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex; 
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-right: 20px; 
 }
 
 .nav-link {
