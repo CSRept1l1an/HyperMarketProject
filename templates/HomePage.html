@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Message Board - {% block title %}{% endblock title %}</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="\static\style.css"> </head>
 <body>
-<h1>Message Board</h1>
-{% include("_navigation.html") %}
-<section>
   <header>
-    {% block header %}{% endblock header %}
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
   <main>
-    {% block content %}<p>No messages.</p>{% endblock content %}
+    <h1>Welcome to My Website!</h1>
+    <p>This is the main content area of the homepage. You can add any content you like here, such as text, images, or videos.</p>
   </main>
-</section>
+
 </body>
 </html>

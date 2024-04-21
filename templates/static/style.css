@@ -1,0 +1,39 @@
+body {
+  margin: 0; /* Remove default browser margins */
+  font-family: sans-serif; /* Set a default font */
+}
+
+header {
+  background-color: #f1f1f1; /* Light gray background for the header */
+  padding: 20px; /* Add some padding inside the header */
+}
+
+.navbar {
+  display: flex; /* Make the navigation bar items appear inline */
+  justify-content: space-between; /* Distribute navbar items evenly */
+}
+
+.nav-list {
+  list-style: none; /* Remove default bullet points from the list */
+  padding: 0; /* Remove default padding from the list */
+  margin: 0; /* Remove default margin from the list */
+}
+
+.nav-item {
+  display: inline-block; /* Make navigation items appear inline */
+  margin-right: 20px; /* Add some margin between navigation items */
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline from the links */
+  color: black; /* Set the link color */
+  font-weight: bold; /* Make the links bold */
+}
+
+main {
+  padding: 20px; /* Add some padding to the main content area */
+}
+
+h1 {
+  margin-bottom: 10px; /* Add some space below the heading */
+}
