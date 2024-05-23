@@ -1,4 +1,11 @@
 <!-- templates/shopping.html -->
+{% extends "base.html" %}
+
+{% block title %}
+Shopping List
+{% endblock %}
+
+{% block content %}
 <style>
     h1 {
         text-align: left;
@@ -12,19 +19,37 @@
         border: 1px solid #ccc;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+        background-color: #ffffff;
     }
 
     .shopping-list h1 {
         margin-top: 0;
+        color: #2e8b57;
     }
 
-    .shopping-list ul {
-        list-style-type: none;
-        padding: 0;
+    .shopping-list table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
     }
 
-    .shopping-list li {
-        margin-bottom: 10px;
+    .shopping-list table th,
+    .shopping-list table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .shopping-list table th {
+        background-color: #2e8b57;
+        color: white;
+    }
+
+    .shopping-list .total {
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
     }
 
     .shopping-list a {
@@ -32,24 +57,63 @@
         margin-top: 20px;
         text-decoration: none;
         color: #2e8b57;
+        padding: 10px 20px;
+        border: 2px solid #2e8b57;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     .shopping-list a:hover {
-        text-decoration: underline;
+        background-color: #2e8b57;
+        color: white;
+    }
+
+    .shopping-list .remove-btn {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .shopping-list .remove-btn:hover {
+        background-color: #ff0000;
     }
 </style>
-{% extends "base.html" %}
 
-{% block title %}
-Shopping List
-{% endblock %}
-
-{% block content %}
-<h1>Shopping List</h1>
-<ul>
-    {% for item in shopping_list %}
-    <li>{{ item.name }} - ${{ item.price }}</li>
-    {% endfor %}
-</ul>
-<a href="/products">Back to Products List</a>
+<div class="shopping-list">
+    <h1>Shopping List</h1>
+    {% if shopping_list %}
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in shopping_list %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>${{ item.price }}</td>
+                <td>{{ item.quantity if item.quantity is defined else 1 }}</td>
+                <td>${{ item.price * (item.quantity if item.quantity is defined else 1) }}</td>
+                <td><button class="remove-btn">Remove</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="total">
+        Total: ${{ shopping_list | sum(attribute='price') }}
+    </div>
+    {% else %}
+    <p>Your shopping list is empty.</p>
+    {% endif %}
+    <a href="/products">Back to Products List</a>
+</div>
 {% endblock %}
