@@ -2,32 +2,12 @@
 {% extends "base.html" %}
 
 {% block title %}
-Products
+{{ product.name }}
 {% endblock %}
 
 {% block content %}
-<h1>Our Products</h1>
-
-<section id="products-list">
-    <h2>Available Products</h2>
-    <div class="product">
-        <h3>Product 1</h3>
-        <p>Brief description of Product 1.</p>
-        <p><strong>Price:</strong> $XX.XX</p>
-        <a href="/product/1">View Product</a>
-    </div>
-    <div class="product">
-        <h3>Product 2</h3>
-        <p>Brief description of Product 2.</p>
-        <p><strong>Price:</strong> $XX.XX</p>
-        <a href="/product/2">View Product</a>
-    </div>
-    <div class="product">
-        <h3>Product 3</h3>
-        <p>Brief description of Product 3.</p>
-        <p><strong>Price:</strong> $XX.XX</p>
-        <a href="/product/3">View Product</a>
-    </div>
-    <!-- Add more products as needed -->
-</section>
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<p><strong>Price:</strong> ${{ product.price }}</p>
+<a href="/products">Back to Products List</a>
 {% endblock %}

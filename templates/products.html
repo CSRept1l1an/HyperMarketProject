@@ -1,0 +1,22 @@
+<!-- templates/products.html -->
+{% extends "base.html" %}
+
+{% block title %}
+Products
+{% endblock %}
+
+{% block content %}
+<h1>Our Products</h1>
+
+<section id="products-list">
+    <h2>Available Products</h2>
+    {% for id, product in products.items() %}
+    <div class="product">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <a href="/product/{{ id }}">View Product</a>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
