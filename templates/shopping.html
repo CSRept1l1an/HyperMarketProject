@@ -1,4 +1,43 @@
 <!-- templates/shopping.html -->
+<style>
+    h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .shopping-list {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .shopping-list h1 {
+        margin-top: 0;
+    }
+
+    .shopping-list ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .shopping-list li {
+        margin-bottom: 10px;
+    }
+
+    .shopping-list a {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #2e8b57;
+    }
+
+    .shopping-list a:hover {
+        text-decoration: underline;
+    }
+</style>
 {% extends "base.html" %}
 
 {% block title %}

@@ -1,4 +1,22 @@
 <!-- templates/home.html -->
+
+<style>
+    h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #featured-products {
+        text-align: center;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    #contact-us p {
+        margin: 5px 0;
+    }
+    </style>
+
 {% extends "base.html" %}
 
 {% block title %}
@@ -6,7 +24,7 @@ Home
 {% endblock %}
 
 {% block content %}
-<h1>Welcome to Our Hypermarket</h1>
+<h1>Aplha Hypermarketə xoş gəlmişsiniz</h1>
 <p>Discover a wide range of products at unbeatable prices. We offer everything from fresh produce to household essentials and more. Shop with us for a convenient and enjoyable shopping experience.</p>
 
 <section id="featured-products">
@@ -23,12 +41,19 @@ Home
         <h3>Product 3</h3>
         <p>Don't miss out on this exclusive offer.</p>
     </div>
+    <div class="product">
+        <h3>Product 3</h3>
+        <p>Don't miss out on this exclusive offer.</p>
+    </div>
+    <div class="product">
+        <h3>Product 3</h3>
+        <p>Don't miss out on this exclusive offer.</p>
+    </div>
+    <div class="product">
+        <h3>Product 3</h3>
+        <p>Don't miss out on this exclusive offer.</p>
+    </div>
 </section>
 
-<section id="contact-us">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need assistance, feel free to reach out to our customer service team.</p>
-    <p>Email: support@hypermarket.com</p>
-    <p>Phone: (123) 456-7890</p>
-</section>
+
 {% endblock %}
