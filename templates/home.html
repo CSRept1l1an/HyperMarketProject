@@ -2,8 +2,13 @@
 
 <style>
     h1 {
-        text-align: left;
-        margin-left: 20px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        width: 80%;
+        margin: 20px auto;
     }
 
     #featured-products {
@@ -12,10 +17,77 @@
         width: 80%;
     }
 
-    #contact-us p {
-        margin: 5px 0;
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 30%;
+        margin: 1.5%;
+        vertical-align: top;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, #2e8b57, green);
+        color: #fff;
+        border-radius: 5px;
     }
-    </style>
+
+    .metrics {
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+        width: 80%;
+
+    }
+
+    .metrics h2 {
+        color: #2e8b57;
+        margin-bottom: 20px;
+    }
+
+    .metrics p {
+        margin-bottom: 30px;
+    }
+
+    .metrics .metric-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: no-wrap;
+    }
+
+    .metrics .metric {
+        width: 20%;
+        margin: 10px;
+        border: 1px solid #ccc;
+        padding: 20px 0;
+        background: linear-gradient(to bottom, #2e8b57, green);
+        color: #fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .metrics .metric h3 {
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .metrics .metric p {
+        margin: 5px 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+
+    }
+</style>
 
 {% extends "base.html" %}
 
@@ -24,7 +96,8 @@ Home
 {% endblock %}
 
 {% block content %}
-<h1>Aplha Hypermarketə xoş gəlmişsiniz</h1>
+<div style="background-color: white;">
+    <h1>Alpha Hypermarketə xoş gəlmişsiniz</h1>
 <p>Discover a wide range of products at unbeatable prices. We offer everything from fresh produce to household essentials and more. Shop with us for a convenient and enjoyable shopping experience.</p>
 
 <section id="featured-products">
@@ -42,18 +115,41 @@ Home
         <p>Don't miss out on this exclusive offer.</p>
     </div>
     <div class="product">
-        <h3>Product 3</h3>
-        <p>Don't miss out on this exclusive offer.</p>
+        <h3>Product 4</h3>
+        <p>Exclusive deal available now.</p>
     </div>
     <div class="product">
-        <h3>Product 3</h3>
-        <p>Don't miss out on this exclusive offer.</p>
+        <h3>Product 5</h3>
+        <p>Great savings on this item.</p>
     </div>
     <div class="product">
-        <h3>Product 3</h3>
-        <p>Don't miss out on this exclusive offer.</p>
+        <h3>Product 6</h3>
+        <p>Special offer just for you.</p>
     </div>
 </section>
 
+</div>
+<section class="metrics">
+    <h2>Bizim göstəricilər</h2>
+    <p>Biz yeni imkanlar axtarırıq və digərlərinin bilmədikləri yerlərə getməyə hazırıq.</p>
+    <div class="metric-container">
+        <div class="metric">
+            <h3>137</h3>
+            <p>Market sayı</p>
+        </div>
+        <div class="metric">
+            <h3>11</h3>
+            <p>Region</p>
+        </div>
+        <div class="metric">
+            <h3>50000+</h3>
+            <p>Məhsul sayı</p>
+        </div>
+        <div class="metric">
+            <h3>5500+</h3>
+            <p>Əməkdaş sayı</p>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
