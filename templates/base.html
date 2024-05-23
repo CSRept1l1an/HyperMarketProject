@@ -16,6 +16,10 @@
         nav {
             background-color: #2e8b57; /* Green-gray color for the navigation bar */
             padding: 10px 0;
+            position: fixed; /* Make the navbar fixed at the top */
+            width: 100%; /* Ensure the navbar spans the full width */
+            top: 0; /* Position it at the very top */
+            z-index: 1000; /* Ensure it stays above other content */
         }
 
         ul {
@@ -44,7 +48,7 @@
         }
 
         .container {
-            margin: 20px;
+            margin: 60px 20px 20px 20px; /* Add top margin to avoid overlap with the fixed navbar */
         }
     </style>
 </head>
