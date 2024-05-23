@@ -5,6 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #2e8b57; /* Green-gray color for the navigation bar */
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        li:last-child {
+            margin-right: 0; /* Remove margin from the last list item */
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff; /* White text color for links */
+        }
+
+        a:hover {
+            color: #cccccc; /* Light gray text color on hover */
+        }
+
+        .container {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -15,7 +57,7 @@
             <li><a href="/about">About Us</a></li>
         </ul>
     </nav>
-    <div>
+    <div class="container">
         {% block content %}{% endblock %}
     </div>
 </body>

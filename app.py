@@ -36,6 +36,7 @@ def product(product_id):
         if 'shopping_list' not in session:
             session['shopping_list'] = []
         session['shopping_list'].append(product)
+        session.modified = True
         return redirect(url_for('shopping_list'))
 
     return render_template('product.html', product=product)
