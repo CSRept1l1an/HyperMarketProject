@@ -2,9 +2,15 @@
 {% extends "base.html" %}
 
 {% block title %}
-Shopping Page
+Shopping List
 {% endblock %}
 
 {% block content %}
-<h1>Shopping Page</h1>
+<h1>Shopping List</h1>
+<ul>
+    {% for item in shopping_list %}
+    <li>{{ item.name }} - ${{ item.price }}</li>
+    {% endfor %}
+</ul>
+<a href="/products">Back to Products List</a>
 {% endblock %}
